@@ -7,7 +7,6 @@ import { HttpError, UpstreamError } from './lib/errors.js';
 import { api } from './routes/api.js';
 
 const app = express();
-app.set('trust proxy', 1); // behind Render/Railway proxy, so rate limiting sees the real client IP
 
 app.use(helmet());
 app.use(cors({ origin: config.allowedOrigins, methods: ['GET', 'POST'] }));
