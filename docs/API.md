@@ -2,7 +2,7 @@
 
 Base URL
 - Local: `http://localhost:4000/api`
-- Deployed: `https://<your-render-app>.onrender.com/api` (see the README)
+
 
 All main endpoints are **`POST` with a JSON body**. The frontend sends what the farmer typed (`city` + `country`) and the backend handles geocoding. Only **Sub-Saharan African** countries are supported.
 

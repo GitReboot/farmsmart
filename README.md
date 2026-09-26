@@ -72,12 +72,14 @@ const plan = await farmsmart('grow-plan', { city: 'Nakuru', country: 'Kenya', cr
 
 **Option B: call the backend directly.** Set `NEXT_PUBLIC_API_URL=http://localhost:4000` and use `${process.env.NEXT_PUBLIC_API_URL}/api/...`. The backend allows CORS from the origins listed in `ALLOWED_ORIGINS`.
 
-## Deploying
+## Running the demo locally
 
-- **Backend → Render.** New → Blueprint → pick this repo (it uses `render.yaml`). Set `OPENAI_API_KEY` and `ALLOWED_ORIGINS` (your Vercel URL) in the dashboard.
-- **Frontend → Vercel.** Import the repo and set the root directory to `frontend`. Set `BACKEND_URL=https://<render-app>.onrender.com`.
-
-Render's free tier sleeps after about 15 minutes idle, so open `/api/health` a minute before the demo.
+Use two terminals:
+```bash
+cd backend && npm run dev     # http://localhost:4000
+cd frontend && npm run dev    # http://localhost:3000
+```
+Open http://localhost:3000. If both run on the same machine, no extra config is needed.
 
 ## How it works
 
