@@ -21,7 +21,7 @@ const DEFAULT_CITIES = [
   'Gulu,Uganda',
   'Lilongwe,Malawi',
   'Kaolack,Senegal',
-  'Musanze,Rwanda',
+  // Avoid steep volcanic highlands (e.g. Musanze, Rwanda): ERA5 overestimates rain there ~3x.
 ];
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
